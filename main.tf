@@ -8,11 +8,11 @@ data "intersight_organization_organization" "org_moid" {
   name = var.organization
 }
 
-#_______________________________________________________________________________
+#__________________________________________________________________
 #
 # FC Zone Policies
 # GUI Location: Configure > Policies > Create Policy > FC Zone
-#_______________________________________________________________________________
+#__________________________________________________________________
 
 resource "intersight_fabric_fc_zone_policy" "fc_zone" {
   depends_on = [
