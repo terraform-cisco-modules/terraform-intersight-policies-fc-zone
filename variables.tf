@@ -44,7 +44,6 @@ variable "targets" {
   description = <<-EOT
     A List of FC Target Details to assign to the Policy
     * name - Name given to the target member.
-    * Gold
     * switch_id - Unique identifier for the Fabric object.
       - A - Switch Identifier of Fabric Interconnect A.
       - B - Switch Identifier of Fabric Interconnect B.

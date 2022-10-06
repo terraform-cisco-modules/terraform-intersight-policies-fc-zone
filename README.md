@@ -1,9 +1,14 @@
 <!-- BEGIN_TF_DOCS -->
+[![Tests](https://github.com/terraform-cisco-modules/terraform-intersight-policies-fc-zone/actions/workflows/terratest.yml/badge.svg)](https://github.com/terraform-cisco-modules/terraform-intersight-policies-fc-zone/actions/workflows/terratest.yml)
 # Terraform Intersight Policies - FC Zone
 Manages Intersight FC Zone Policies
 
 Location in GUI:
 `Policies` » `Create Policy` » `FC Zone`
+
+## Easy IMM
+
+[*Easy IMM - Comprehensive Example*](https://github.com/terraform-cisco-modules/easy-imm-comprehensive-example) - A comprehensive example for policies, pools, and profiles.
 
 ## Example
 
@@ -82,7 +87,6 @@ $env:TF_VAR_apikey="<your-api-key>"
 $env:TF_VAR_secretkey="<secret-key-file-location>"
 ```
 
-
 ## Requirements
 
 | Name | Version |
@@ -106,7 +110,7 @@ $env:TF_VAR_secretkey="<secret-key-file-location>"
 | <a name="input_name"></a> [name](#input\_name) | Name for the Policy. | `string` | `"default"` | no |
 | <a name="input_organization"></a> [organization](#input\_organization) | Intersight Organization Name to Apply Policy to.  https://intersight.com/an/settings/organizations/. | `string` | `"default"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | List of Tag Attributes to Assign to the Policy. | `list(map(string))` | `[]` | no |
-| <a name="input_targets"></a> [targets](#input\_targets) | A List of FC Target Details to assign to the Policy<br>* name - Name given to the target member.<br>* Gold<br>* switch\_id - Unique identifier for the Fabric object.<br>  - A - Switch Identifier of Fabric Interconnect A.<br>  - B - Switch Identifier of Fabric Interconnect B.<br>* vsan\_id - VSAN with scope defined as Storage in the VSAN policy.<br>* wwpn - WWPN that is a member of the FC zone. | <pre>list(object(<br>    {<br>      name      = string<br>      switch_id = string<br>      vsan_id   = number<br>      wwpn      = string<br>    }<br>  ))</pre> | `[]` | no |
+| <a name="input_targets"></a> [targets](#input\_targets) | A List of FC Target Details to assign to the Policy<br>* name - Name given to the target member.<br>* switch\_id - Unique identifier for the Fabric object.<br>  - A - Switch Identifier of Fabric Interconnect A.<br>  - B - Switch Identifier of Fabric Interconnect B.<br>* vsan\_id - VSAN with scope defined as Storage in the VSAN policy.<br>* wwpn - WWPN that is a member of the FC zone. | <pre>list(object(<br>    {<br>      name      = string<br>      switch_id = string<br>      vsan_id   = number<br>      wwpn      = string<br>    }<br>  ))</pre> | `[]` | no |
 ## Outputs
 
 | Name | Description |

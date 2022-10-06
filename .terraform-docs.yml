@@ -3,12 +3,17 @@ version: '>= 0.14.0'
 formatter: markdown table
 
 content: |-
+  [![Tests](https://github.com/terraform-cisco-modules/terraform-intersight-policies-fc-zone/actions/workflows/terratest.yml/badge.svg)](https://github.com/terraform-cisco-modules/terraform-intersight-policies-fc-zone/actions/workflows/terratest.yml)
   # Terraform Intersight Policies - FC Zone
   Manages Intersight FC Zone Policies
   
   Location in GUI:
   `Policies` » `Create Policy` » `FC Zone`
   
+  ## Easy IMM
+
+  [*Easy IMM - Comprehensive Example*](https://github.com/terraform-cisco-modules/easy-imm-comprehensive-example) - A comprehensive example for policies, pools, and profiles.
+
   ## Example
 
   ### main.tf
@@ -43,7 +48,6 @@ content: |-
   $env:TF_VAR_apikey="<your-api-key>"
   $env:TF_VAR_secretkey="<secret-key-file-location>"
   ```
-
 
   {{ .Requirements }}
   {{ .Providers }}
