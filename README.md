@@ -107,9 +107,6 @@ export TF_VAR_secretkeyfile="<secret-key-file-location>"
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_apikey"></a> [apikey](#input\_apikey) | Intersight API Key. | `string` | n/a | yes |
-| <a name="input_endpoint"></a> [endpoint](#input\_endpoint) | Intersight URL. | `string` | `"https://intersight.com"` | no |
-| <a name="input_secretkey"></a> [secretkey](#input\_secretkey) | Intersight Secret Key. | `string` | n/a | yes |
 | <a name="input_description"></a> [description](#input\_description) | Description for the Policy. | `string` | `""` | no |
 | <a name="input_fc_target_zoning_type"></a> [fc\_target\_zoning\_type](#input\_fc\_target\_zoning\_type) | Type of FC zoning. Allowed values are SIST, SIMT and None.<br>* None: (default) - FC zoning is not configured.<br>* SIMT - Single Initiator Multiple Target.  The system automatically creates one zone for each vHBA. Configure this type of zoning if the number of zones created is likely to exceed the maximum supported number of zones.<br>* SIST - Single Initiator Single Target.  The system automatically creates one zone for each vHBA and storage port pair. Each zone has two members. | `string` | `"None"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name for the Policy. | `string` | `"default"` | no |
